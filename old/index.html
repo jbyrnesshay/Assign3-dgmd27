@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" href="bower_components/uikit/css/uikit.almost-flat.min.css">
+		<link rel="stylesheet" href="bower_components/uikit/css/components/sticky.almost-flat.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/uikit/js/uikit.min.js"></script>
+		<script type="text/javascript" src="bower_components/uikit/js/components/sticky.min.js"></script>
+	</head>
+	<body>
+		<div class="uk-container uk-container-center uk-margin-top">
+			<nav class="uk-navbar" data-uk-sticky="{clsactive: 'uk-navbar-attached', top: -100, animation: 'uk-animation-slide-top'}">
+				
+				<a href="#" class="uk-navbar-brand uk-visible-large">The Age of Space</a>
+				<ul class="uk-navbar-nav uk-visible-large" style="position:relative;" data-uk-scrollspy-nav="{closest: 'li', smoothscroll: {offset: 50}}">
+					
+					<li><a href="#dream" class="uk-navbar-nav-subtitle">The Dream
+						<div>impossible</div></a></li>
+						<li><a href="#launch">The Launch</a></li>
+						
+						<li class="uk-parent" data-uk-dropdown="{pos:'bottom-left'}"><a href="#mars">Life on Mars</a>
+						<div class="uk-dropdown uk-dropdown-navbar" style="">
+							<ul class="uk-nav uk-nav-navbar">
+								<li><a href="#">one</a></li>
+								<li><a href="#">two</a></li>
+								<li class="uk-nav-header">header</li>
+								<li><a href="#">three</a></li>
+								<li><a href="#">four</a></li>
+								<li class="uk-nav-divider"></li>
+								<li><a href="#" >separated item</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<a href="#offcanvas" class="uk-navbar-toggle uk-hidden-large"  data-uk-offcanvas></a>
+				<a href="#" class="uk-navbar-brand uk-navbar-center uk-hidden-large">The Age of Space</a>
+				
+			</nav>
+		</div>
+		<!--navigation-->
+		<!--conbatent-->
+		<div class="uk-container uk-container-center uk-margin-top">
+			<h1 class="uk-text-center" id="dream">The Dream</h1>
+			<img width="1200" height="800" src="images/space1.jpg" alt="night sky">
+			<hr class="uk-grid-divider">
+			<div class="uk-grid uk-grid-width-medium-1-2" data-uk-grid-margin>
+				<div>
+					<img width="600" height="400" src="images/space2.jpeg" alt="">
+				</div>
+				<div>
+					<h2>reaching for the stars</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ratione quo alias fugit maiores enim odio amet, harum provident necessitatibus, error eveniet iste non voluptatibus dolore rem voluptates deleniti quos?
+					</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quos esse quo? Neque, quaerat, exercitationem. Voluptas omnis nesciunt porro veritatis culpa quasi. Repellendus culpa corrupti, fugiat sunt quia magni consequuntur.</p>
+				</div>
+			</div>
+			<hr class="uk-grid-divider">
+			<h1 class="uk-text-center" id='launch'>the launch</h1>
+			<div class="uk-margin" data-uk-grid-margin>
+				<img src="images/space4.jpg" width="1200" height="800" alt="">
+			</div>
+			<div class="uk-grid uk-grid-width-medium-1-2" data-uk-grid-margin>
+				<div>
+					<img width="600" height="400" src="images/space5.jpg" alt="">
+				</div>
+				<div>
+					<h2>Plenty of Challenges Ahead</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur iste, soluta ex dolore sapiente iusto nesciunt quasi laboriosam officia cum, ab nemo tempora nostrum ipsam recusandae et voluptate a asperiores!</p>
+					<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit sunt laudantium accusamus quo cum dicta magni rem voluptas praesentium quia officia beatae numquam hic quos, odio deserunt voluptatum. Rerum, recusandae.
+					</p>
+				</div>
+			</div>
+			<div class="uk-grid uk-grid-width-medium-1-2" data-uk-grid-margin>
+				<div id="mars">
+					<h2> A Colony of Humans </h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quod, repudiandae. Mollitia non deserunt facere enim dignissimos doloribus maxime. Eius, eaque! Iusto sequi, a consequuntur eaque quis, laudantium accusantium optio.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat odio aliquam optio quae distinctio excepturi inventore facilis ducimus culpa sed suscipit consequuntur, eligendi, atque totam consectetur accusantium quo ipsum perspiciatis.</p>
+				</div>
+				<div>
+					<img width="600" height="400" src="images/space6.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<footer class="uk-text-center uk-margin-large">
+			<a href="#" data-uk-smooth-scroll >To Top</a>
+		</footer>
+		
+		<div id="offcanvas" class="uk-offcanvas" >
+			<div class="uk-offcanvas-bar">
+				<ul class="uk-nav uk-nav-offcanvas">
+					<li><a href="#dream">The Dream</a></li>
+					<li><a href="#launch">The Launch</a></li>
+					<li><a href="#mars">Life on Mars</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

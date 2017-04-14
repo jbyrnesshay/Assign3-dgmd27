@@ -1,0 +1,216 @@
+
+
+
+._uppercase {
+	text-transform:uppercase;
+}
+
+
+body {
+  background: @background;
+    //background: @third;
+}
+header {
+    background: white;
+}
+
+.uk-panel {
+    background: @fun !important;
+}
+
+form.uk-form-stacked fieldset {
+     font-family: "Josephin Sans";
+}
+nav > ul > li > a {
+ 	.uk-text-center;
+ 	.uk-button-primary; 
+ 	.uk-margin-small-top;
+ 	.uk-margin-small-bottom;
+ 	 
+   &::first-letter {
+        background: red;
+        text-transform: uppercase;
+    }
+    padding: 0;
+    
+    width: 100%;
+} 
+nav > ul > li > a:first-letter {
+    background: red !important;
+}
+@breakpoint-medium: 900px;
+ @media (max-width: @breakpoint-xlarge) {  
+    //avoids clipping of nav link text vs icon
+ nav > ul > li > a  { padding: 0 0 !important; 
+ }
+  
+}
+@media (min-width: @breakpoint-medium) and (max-width:@breakpoint-large) {
+    .uk-navbar-nav > li > a {
+       width: 80% !important;
+        height: 1.5em !important;
+        line-height: 1.5em !important;
+    }
+}
+
+
+header h1, .uk-navbar-nav > li > a {
+	font-family: "Alegreya";
+    font-family: 'Josefin Sans';
+}
+ 
+h2, h3, h4, h5, h6 {
+	font-family: 'Josefin Sans';
+}
+ 
+h2 {
+	font-family: 'Cedarville Cursive';
+}
+
+.headertext {
+	font-family: "Fredericka the Great";
+    
+}
+
+
+h1 span {
+	color: green;
+	font-size: 3em;
+ 
+}
+ 
+
+ body {
+ 	font-family: "IM Fell English";
+ }
+ 
+div.uk-cover {
+	 
+ 	
+	height: 10em;
+	width: 100%;  
+    position: relative;
+    letter-spacing: .4em;
+    border-bottom: 1px solid black;
+    z-index: 0;  
+}
+ 
+div.uk-cover:before {
+		width: 100%;
+		height: 100%;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	content: "";
+    	background: url("../img/background2x_1200.png") no-repeat;
+    	opacity: 0.6;
+    	z-index:-3;
+    	display: block;
+	}
+
+
+
+#sticker {
+	z-index: 5;
+}
+.main-content-container {
+	z-index: 100;
+	opacity: .5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width:  100%;
+}
+
+.background-content-container {
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ /*background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;*/
+  	background-size: cover;
+    transition: 1s opacity;
+
+}
+ 
+
+ .thing {
+  background: rgba(0,0,0,0.3);
+  color: white;
+  padding: 2rem;
+  width: 33%;
+  margin:2rem;
+  float: right;
+  font-size: 1.2rem;
+ }
+
+/* iframe and object are used in frame1.html and frame2.html, these styles set up the control of these pages */
+
+/*styling the descriptive text about what goes in on the iframe pages */
+body .iframe.col-rm-4-3 p {
+    background: floralwhite;
+    font-family: Arial, sans-serif;
+    font-size: .9em;
+}
+body iframe {
+    height: 50em;
+}
+/* keeps the iframe windows trancated, with allowable scrolling, so the page on desktop dimensions doesn't just go on for great height, and 
+so can see  the footer within a reasonable spread */
+.manageHeight {
+    position: relative;
+    border: 2px solid black;
+    padding: 1em;
+}
+/*dont include object in base case.  it will be turned on at mobile dimensions, where iframe will instead not be displayed */
+body object {
+    display: none;
+    height: 50em;
+}
+/* articles contain main content text and main content images */
+.external article p {
+    padding: 0;
+}
+ 
+
+ 
+
+ 
+ 
+ div[data-uk-filter*="Filter"] {
+    position: absolute; 
+    box-sizing: border-box; 
+     
+    //margin-right: 2%;
+    display: none;
+    //width: 23%;
+    //top:0px;
+    float: left;
+    //width: 20%;
+    //margin-right: 5%;
+    
+    margin-bottom: 1em;
+}
+
+ 
+div[data-uk-filter*="Filter"] div {
+     
+}
+#filter-image {
+    position: relative; 
+    
+    width: auto;
+    
+     
+}
+#filter-image img {
+  
+}
+#filter-bin {
+ }

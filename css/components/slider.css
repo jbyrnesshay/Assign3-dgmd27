@@ -1,0 +1,105 @@
+/* ========================================================================
+   Component: Slider
+ ========================================================================== */
+/*
+ * RTL Compatibility
+ */
+/* line 35, C:\Users\winescape-xx\Desktop\uikitpractice\bower_components\uikit\less\components\slider.less */
+[data-uk-slider] {
+  direction: ltr;
+}
+/* line 37, C:\Users\winescape-xx\Desktop\uikitpractice\bower_components\uikit\less\components\slider.less */
+html[dir="rtl"] .uk-slider > * {
+  direction: rtl;
+}
+/*
+ * 1. Create position context
+ * 2. Create stacking context to prevent z-index issues with other components
+ * 3. Deactivate browser history navigation in IE11
+ */
+/* line 45, C:\Users\winescape-xx\Desktop\uikitpractice\bower_components\uikit\less\components\slider.less */
+.uk-slider {
+  /* 1 */
+  position: relative;
+  /* 2 */
+  z-index: 0;
+  /* 3 */
+  touch-action: pan-y;
+}
+/*
+ * 1. Reset list style without interfering with grid
+ */
+/* line 58, C:\Users\winescape-xx\Desktop\uikitpractice\bower_components\uikit\less\components\slider.less */
+.uk-slider:not(.uk-grid) {
+  /* 1 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*
+ * Sub-object item
+ * 1. Position items above each other
+ */
+/* line 70, C:\Users\winescape-xx\Desktop\uikitpractice\bower_components\uikit\less\components\slider.less */
+.uk-slider > * {
+  /* 1 */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*
+ * Clip child elements
+ */
+/* line 81, C:\Users\winescape-xx\Desktop\uikitpractice\bower_components\uikit\less\components\slider.less */
+.uk-slider-container {
+  overflow: hidden;
+}
+/*
+ * Dragged
+ */
+/* line 87, C:\Users\winescape-xx\Desktop\uikitpractice\bower_components\uikit\less\components\slider.less */
+.uk-slider:not(.uk-drag) {
+  -webkit-transition: -webkit-transform 200ms linear;
+  transition: transform 200ms linear;
+}
+/*
+ * 1. Makes text unselectable
+ */
+/* line 96, C:\Users\winescape-xx\Desktop\uikitpractice\bower_components\uikit\less\components\slider.less */
+.uk-slider.uk-drag {
+  cursor: col-resize;
+  /* 1 */
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*
+ * 1. Prevents images and links from being dragged (default browser behavior)
+ * 2. Disables the default callout shown when you touch and hold a touch target
+ * Currently only works in Webkit
+ */
+/* line 111, C:\Users\winescape-xx\Desktop\uikitpractice\bower_components\uikit\less\components\slider.less */
+.uk-slider a,
+.uk-slider img {
+  /* 1 */
+  -webkit-user-drag: none;
+  user-drag: none;
+  /* 2 */
+  -webkit-touch-callout: none;
+}
+/*
+ * 1. Prevents images and links from being dragged in Firefox
+ */
+/* line 124, C:\Users\winescape-xx\Desktop\uikitpractice\bower_components\uikit\less\components\slider.less */
+.uk-slider img {
+  pointer-events: none;
+}
+/* Modifier: `uk-slider-fullscreen`
+ ========================================================================== */
+/* line 130, C:\Users\winescape-xx\Desktop\uikitpractice\bower_components\uikit\less\components\slider.less */
+.uk-slider-fullscreen,
+.uk-slider-fullscreen > li {
+  height: 100vh;
+}
+/*# sourceMappingURL=slider.css.map */

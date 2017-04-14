@@ -1,0 +1,139 @@
+/* ========================================================================
+   Component: Dotnav
+ ========================================================================== */
+/*
+ * 1. Gutter
+ * 2. Remove default list style
+ */
+/* line 51, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\dotnav.less */
+.uk-dotnav {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* 1 */
+  margin-left: -15px;
+  margin-top: -15px;
+  /* 2 */
+  padding: 0;
+  list-style: none;
+}
+/*
+ * 1. Space is allocated solely based on content dimensions
+ * 2. Horizontal gutter is using `padding` so `uk-width-*` classes can be applied
+ */
+/* line 71, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\dotnav.less */
+.uk-dotnav > * {
+  /* 1 */
+  -ms-flex: none;
+  -webkit-flex: none;
+  flex: none;
+  /* 2 */
+  padding-left: 15px;
+  margin-top: 15px;
+}
+/*
+ * DEPRECATED IE9 Support
+ */
+/* line 85, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\dotnav.less */
+.uk-dotnav:before,
+.uk-dotnav:after {
+  content: "";
+  display: block;
+  overflow: hidden;
+}
+/* line 92, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\dotnav.less */
+.uk-dotnav:after {
+  clear: both;
+}
+/* line 94, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\dotnav.less */
+.uk-dotnav > * {
+  float: left;
+}
+/* Items
+ ========================================================================== */
+/*
+ * Items
+ * 1. Hide text if present
+ */
+/* line 105, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\dotnav.less */
+.uk-dotnav > * > * {
+  display: block;
+  box-sizing: content-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(50, 50, 50, 0.1);
+  /* 1 */
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/*
+ * Hover
+ * 1. Apply hover style also to focus state
+ * 2. Remove default focus style
+ */
+/* line 125, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\dotnav.less */
+.uk-dotnav > * > :hover,
+.uk-dotnav > * > :focus {
+  background: rgba(50, 50, 50, 0.4);
+  /* 2 */
+  outline: none;
+}
+/* OnClick */
+/* line 134, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\dotnav.less */
+.uk-dotnav > * > :active {
+  background: rgba(50, 50, 50, 0.6);
+}
+/* Active */
+/* line 140, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\dotnav.less */
+.uk-dotnav > .uk-active > * {
+  background: rgba(50, 50, 50, 0.4);
+}
+/* Modifier: `uk-dotnav-contrast`
+ ========================================================================== */
+/* line 149, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\dotnav.less */
+.uk-dotnav-contrast > * > * {
+  background: rgba(255, 255, 255, 0.4);
+}
+/*
+ * Hover
+ * 1. Apply hover style also to focus state
+ */
+/* line 159, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\dotnav.less */
+.uk-dotnav-contrast > * > :hover,
+.uk-dotnav-contrast > * > :focus {
+  background: rgba(255, 255, 255, 0.7);
+}
+/* OnClick */
+/* line 166, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\dotnav.less */
+.uk-dotnav-contrast > * > :active {
+  background: rgba(255, 255, 255, 0.9);
+}
+/* Active */
+/* line 172, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\dotnav.less */
+.uk-dotnav-contrast > .uk-active > * {
+  background: rgba(255, 255, 255, 0.9);
+}
+/* Modifier: 'uk-dotnav-vertical'
+ ========================================================================== */
+/*
+ * DEPRECATED
+ */
+/* line 185, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\dotnav.less */
+.uk-dotnav-vertical {
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+/*
+ * DEPRECATED IE9 Support
+ */
+/* line 195, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\dotnav.less */
+.uk-dotnav-vertical > * {
+  float: none;
+}
+/*# sourceMappingURL=dotnav.css.map */

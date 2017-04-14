@@ -1,0 +1,91 @@
+<!--authored by Joachim Byrnes-Shay. This page is special case as my requirements are already fulfilled from index.html and sights.html.
+in this page i wanted to see how using iframe to window an external site within my own page would go.  used media query to change to object instead of iframe for mobile dimensions, due to how iphone handles iframe diffultly.
+Except as cited, all programming/code and images on all pages are my own code/photography-->
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<!--<link href="bower_components/uikit/css/uikit.gradient.min.css" rel="stylesheet">-->
+		
+		<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+		</script>
+		<script src="uikit/js/uikit.js"></script>
+		<script src="uikit/js/components/lightbox.js"></script>
+		<script src="uikit/js/components/parallax.js"></script>
+		<script src="uikit/js/components/sticky.js"></script>
+		<script src="uikit/js/components/slideshow.js"></script>
+		<script src="uikit/js/components/slideshow-fx.js"></script>
+		<script src="uikit/js/components/form-password.js"></script>
+		<script src="uikit/js/components/switcher.js"></script>
+		<link href="styles.css" rel="stylesheet" type="text/css">
+		<link href="css/styleless.css" rel="stylesheet">
+		<script src="myscripts/picturefill.min.js" async></script>
+		<script> // Picture element HTML5 shiv
+					document.createElement( "picture" );
+		</script>
+		<noscript>
+		<!-- pipe is url encoded as %7c to ensure w3c validation, from http://stackoverflow.com/questions/22466913/google-fonts-url-break-html5-validation-on-w3-org -->
+		<link href="https://fonts.googleapis.com/css?family=Alegreya:400,400i,700,700i,900,900i%7cJosefin+Sans:100,200,300,400,500,600,700,800,900%7cCedarville+Cursive%7cFredericka+the+Great%7cIM+Fell+English" rel="stylesheet">
+		</noscript>
+	</head>
+	<body class="external food">
+		<div class="uk-container uk-container-center">
+			<header class="uk-display-block">
+				<div class="uk-grid uk-container-center">
+					<div class="uk-cover uk-width-1-1 uk-container-center">
+						<div class="uk-grid uk-height-1-1 uk-flex-middle" data-uk-margin="">
+							
+							<h1 class="uk-width-medium-1-2 uk-width-small-1-1 uk-flex-item-1"> <span class="uk-text-uppercase uk-float-left">t</span>ibet. </h1>
+							<p class="headertext uk-width-medium-1-2 uk-width-small-1-1 uk-margin-left"> A far away land.</p>
+						</div>
+					</div>
+					
+				</div>
+			</header>
+			<div class="row">
+					 
+			</div>
+			<div class="innercontainer">
+				<div class="row">
+					<!--span all 6 columns-->
+					<div class="col-6">
+						<h2> Lhasa , Tibet :<span>  Far Away Food</span></h2>
+					</div>
+				</div>
+				<div class="row iframe">
+					<!--span 2/6 columns, bump to 3, then to 6/6 at < 480px -->
+					<article class="col-2-3">
+						<h3> External page w/ dumpling recipe.</h3>
+						<p>In the frame is a link to food.com.</p>
+						<p>  Here I experimented with how it would work to use an iframe to window another page within a page, so I can do so while keeping my nav links on the hosting page. </p>
+					</article>
+						<!--i am using iframe to deliver external food.com page here, just to learn about how I could include an iframe window in responsive design context.  base requirements of assignment are fulfilled in index.html and sights.html.  I found problems with iframe on iphone, so I am using the object tag to deliver the same content to screens < 480 in my media queries -->
+						<!-- it is a 4/6 column display, that goes to 3/6 and then to 6/6 at mobile dimension. it its own column class just to keep track of my special case of fiddling with it -->
+						<div class="uk-grid">
+					<iframe class="uk-width-1-1" src="http://www.food.com/recipe/tibetan-momo-a-dim-sum-dumpling-from-tibet-238992">
+					</iframe>
+					</div>
+					<div class="uk-grid">
+					<object class="uk-width-1-1 manageHeight" type="text/html" data="http://www.food.com/recipe/tibetan-momo-a-dim-sum-dumpling-from-tibet-238992">
+					</object>
+					</div>
+				</div>
+				<div class="row">
+				<!-- span all 6 columns-->
+				<div class="col-6">
+					<footer>
+						<p>&copy; 2017 Joachim Byrnes-Shay </p>
+					</footer>
+				</div>
+			</div>
+			</div>
+		</div>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
+
+
+
+					

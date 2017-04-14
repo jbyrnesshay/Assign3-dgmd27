@@ -1,0 +1,42 @@
+/* ========================================================================
+   Component: Accordion
+ ========================================================================== */
+/* Sub-object: `uk-accordion-title`
+ ========================================================================== */
+/* line 47, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\accordion.less */
+.uk-accordion-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding: 5px 15px;
+  background: #eee;
+  font-size: 18px;
+  line-height: 24px;
+  cursor: pointer;
+}
+/* Sub-object: `uk-accordion-content`
+ ========================================================================== */
+/* line 62, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\accordion.less */
+.uk-accordion-content {
+  padding: 0 15px 15px 15px;
+}
+/*
+ * Micro clearfix to make panels more robust
+ */
+/* line 71, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\accordion.less */
+.uk-accordion-content:before,
+.uk-accordion-content:after {
+  content: "";
+  display: table;
+}
+/* line 77, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\accordion.less */
+.uk-accordion-content:after {
+  clear: both;
+}
+/*
+ * Remove margin from the last-child
+ */
+/* line 83, C:\Users\winescape-xx\Desktop\uikitpractice\less\components\accordion.less */
+.uk-accordion-content > :last-child {
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=accordion.css.map */

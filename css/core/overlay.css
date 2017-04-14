@@ -1,0 +1,421 @@
+/* ========================================================================
+   Component: Overlay
+ ========================================================================== */
+/*
+ * 1. Container width fits its content
+ * 2. Create position context
+ * 3. Set max-width for responsive images to prevent `inline-block` consequences
+ * 4. Remove the gap between the container and its child element
+ * 5. Needed for transitions and to fixed wrong scaling calculation for images in Chrome
+ * 6. Fixed `overflow: hidden` to be ignored with border-radius and CSS transforms in Webkit
+ * 7. Reset margin
+ */
+/* line 106, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay {
+  /* 1 */
+  display: inline-block;
+  /* 2 */
+  position: relative;
+  /* 3 */
+  max-width: 100%;
+  /* 4 */
+  vertical-align: middle;
+  /* 5 */
+  overflow: hidden;
+  /* 6 */
+  -webkit-transform: translateZ(0);
+  /* 7 */
+  margin: 0;
+}
+/* 6 for Safari */
+/* line 124, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay.uk-border-circle {
+  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+}
+/*
+ * Remove margin from content
+ */
+/* line 130, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay > :first-child {
+  margin-bottom: 0;
+}
+/* Sub-object `uk-overlay-panel`
+ ========================================================================== */
+/*
+ * 1. Position cover
+ * 2. Style
+ */
+/* line 141, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-panel {
+  /* 1 */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* 2 */
+  padding: 20px;
+  color: #fff;
+  background: black;
+  bottom: auto;
+  font-family: "Josefin Sans";
+  letter-spacing: .2em;
+}
+/*
+ * Remove margin from the last-child
+ */
+/* line 158, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-panel > :last-child,
+.uk-overlay-panel.uk-flex > * > :last-child {
+  margin-bottom: 0;
+}
+/*
+ * Keep color for headings if the default heading color is changed
+ */
+/* line 165, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-panel h1,
+.uk-overlay-panel h2,
+.uk-overlay-panel h3,
+.uk-overlay-panel h4,
+.uk-overlay-panel h5,
+.uk-overlay-panel h6 {
+  color: inherit;
+}
+/* line 172, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-panel a:not([class]) {
+  color: inherit;
+  text-decoration: underline;
+}
+/* line 177, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-panel a[class*='uk-icon-']:not(.uk-icon-button) {
+  color: inherit;
+}
+/* Sub-object `uk-overlay-hover` and `uk-overlay-active`
+ ========================================================================== */
+/* line 183, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-hover:not(:hover):not(.uk-hover) .uk-overlay-panel:not(.uk-ignore) {
+  opacity: 0;
+}
+/* line 185, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-active :not(.uk-active) > .uk-overlay-panel:not(.uk-ignore) {
+  opacity: 0;
+}
+/* Modifier `uk-overlay-background`
+ ========================================================================== */
+/* line 191, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-background {
+  background: rgba(0, 0, 0, 0.5);
+}
+/* Modifier `uk-overlay-image`
+ ========================================================================== */
+/*
+ * Reset panel
+ */
+/* line 204, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-image {
+  padding: 0;
+}
+/* Position modifiers
+ ========================================================================== */
+/* line 213, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-top {
+  bottom: auto;
+}
+/* line 215, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-bottom {
+  top: auto;
+}
+/* line 217, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-left {
+  right: auto;
+}
+/* line 219, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-right {
+  left: auto;
+}
+/* Sub-object `uk-overlay-icon`
+ ========================================================================== */
+/* line 225, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-icon:before {
+  content: "\f002";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  margin-left: -25px;
+  font-size: 50px;
+  line-height: 1;
+  font-family: FontAwesome;
+  text-align: center;
+  color: #fff;
+}
+/* Transitions
+ ========================================================================== */
+/* line 246, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-fade,
+.uk-overlay-scale,
+.uk-overlay-spin,
+.uk-overlay-grayscale,
+.uk-overlay-blur,
+[class*='uk-overlay-slide'] {
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transition-property: opacity, transform, filter;
+}
+/* line 257, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-active .uk-overlay-fade,
+.uk-overlay-active .uk-overlay-scale,
+.uk-overlay-active .uk-overlay-spin,
+.uk-overlay-active [class*='uk-overlay-slide'] {
+  transition-duration: 0.8s;
+}
+/*
+ * Fade
+ */
+/* line 266, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-fade {
+  opacity: 0.7;
+}
+/* line 268, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-hover:hover .uk-overlay-fade,
+.uk-overlay-hover.uk-hover .uk-overlay-fade,
+.uk-overlay-active .uk-active > .uk-overlay-fade {
+  opacity: 1;
+}
+/*
+ * Scale
+ */
+/* line 276, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-scale {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+/* line 281, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-hover:hover .uk-overlay-scale,
+.uk-overlay-hover.uk-hover .uk-overlay-scale,
+.uk-overlay-active .uk-active > .uk-overlay-scale {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/*
+ * Spin
+ */
+/* line 292, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-spin {
+  -webkit-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
+}
+/* line 297, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-hover:hover .uk-overlay-spin,
+.uk-overlay-hover.uk-hover .uk-overlay-spin,
+.uk-overlay-active .uk-active > .uk-overlay-spin {
+  -webkit-transform: scale(1.1) rotate(3deg);
+  transform: scale(1.1) rotate(3deg);
+}
+/*
+ * Grayscale
+ */
+/* line 308, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+/* line 313, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-hover:hover .uk-overlay-grayscale,
+.uk-overlay-hover.uk-hover .uk-overlay-grayscale,
+.uk-overlay-active .uk-active > .uk-overlay-grayscale {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+/*
+ * Slide
+ */
+/* line 324, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+[class*='uk-overlay-slide'] {
+  opacity: 0;
+}
+/* Top */
+/* line 327, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-slide-top {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+/* Bottom */
+/* line 333, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-slide-bottom {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+/* Left */
+/* line 339, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-slide-left {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+/* Right */
+/* line 345, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-slide-right {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+/* Hover */
+/* line 351, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-hover:hover [class*='uk-overlay-slide'],
+.uk-overlay-hover.uk-hover [class*='uk-overlay-slide'],
+.uk-overlay-active .uk-active > [class*='uk-overlay-slide'] {
+  opacity: 1;
+  -webkit-transform: translateX(0) translateY(0);
+  transform: translateX(0) translateY(0);
+}
+/* DEPRECATED
+ * Sub-object `uk-overlay-area`
+ ========================================================================== */
+/*
+ * 1. Set position
+ * 2. Set style
+ * 3. Fade-in transition
+ */
+/* line 370, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-area {
+  /* 1 */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* 2 */
+  background: rgba(0, 0, 0, 0.3);
+  /* 3 */
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+/*
+ * Hover
+ * 1. `uk-hover` to support touch devices
+ * 2. Use optional `uk-overlay-toggle` to trigger the overlay earlier
+ */
+/* line 393, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay:hover .uk-overlay-area,
+.uk-overlay.uk-hover .uk-overlay-area,
+.uk-overlay-toggle:hover .uk-overlay-area,
+.uk-overlay-toggle.uk-hover .uk-overlay-area {
+  opacity: 1;
+}
+/*
+ * Icon
+ */
+/* line 402, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-area:empty:before {
+  content: "\f002";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  margin-left: -25px;
+  font-size: 50px;
+  line-height: 1;
+  font-family: FontAwesome;
+  text-align: center;
+  color: #fff;
+}
+/* DEPRECATED
+ * Sub-object `uk-overlay-area-content`
+ ========================================================================== */
+/*
+ * Remove whitespace between child elements when using `inline-block`
+ * Needed for Firefox
+ */
+/* line 429, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-area:not(:empty) {
+  font-size: 0.001px;
+}
+/*
+ * 1. Needed for vertical alignment
+ */
+/* line 435, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-area:not(:empty):before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+/*
+ * 1. Set vertical alignment
+ * 2. Reset whitespace hack
+ * 3. Set horizontal alignment
+ * 4. Set style
+ */
+/* line 449, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-area-content {
+  /* 1 */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  vertical-align: middle;
+  /* 2 */
+  font-size: 1rem;
+  /* 3 */
+  text-align: center;
+  /* 4 */
+  padding: 0 15px;
+  color: #fff;
+}
+/*
+ * Remove margin from the last-child
+ */
+/* line 469, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-area-content > :last-child {
+  margin-bottom: 0;
+}
+/*
+ * Links in overlay area
+ */
+/* line 475, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-area-content a:not([class]),
+.uk-overlay-area-content a:not([class]):hover {
+  color: inherit;
+}
+/* DEPRECATED
+ * Sub-object `uk-overlay-caption`
+ ========================================================================== */
+/*
+ * 1. Set position
+ * 2. Set style
+ * 3. Fade-in transition
+ */
+/* line 489, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay-caption {
+  /* 1 */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* 2 */
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  /* 3 */
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+/*
+ * Hover
+ * 1. `uk-hover` to support touch devices
+ * 2. Use optional `uk-overlay-toggle` to trigger the overlay earlier
+ */
+/* line 513, C:\Users\winescape-xx\Desktop\uikitpractice\less\core\overlay.less */
+.uk-overlay:hover .uk-overlay-caption,
+.uk-overlay.uk-hover .uk-overlay-caption,
+.uk-overlay-toggle:hover .uk-overlay-caption,
+.uk-overlay-toggle.uk-hover .uk-overlay-caption {
+  opacity: 1;
+}
+/*# sourceMappingURL=overlay.css.map */

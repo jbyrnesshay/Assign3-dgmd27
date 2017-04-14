@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<!--<link href="bower_components/uikit/css/uikit.gradient.min.css" rel="stylesheet">-->
+		
+		<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+		</script>
+		<script src="uikit/js/uikit.js"></script>
+		<script src="uikit/js/components/lightbox.js"></script>
+		<script src="uikit/js/components/parallax.js"></script>
+		<script src="uikit/js/components/sticky.js"></script>
+		<script src="uikit/js/components/slideshow.js"></script>
+		<script src="uikit/js/components/slideshow-fx.js"></script>
+		
+		<script type="text/javascript" src="uikit/js/components/grid.min.js"></script>
+		<script src="uikit/js/components/grid-parallax.min.js"></script>
+		<script src="uikit/js/components/sortable.js"></script>
+		<link href="styles.css" rel="stylesheet" type="text/css">
+		<link href="css/styleless.css" rel="stylesheet">
+		<script src="myscripts/picturefill.min.js" async></script>
+		<script> // Picture element HTML5 shiv
+					document.createElement( "picture" );
+		</script>
+		<noscript>
+		<!-- pipe is url encoded as %7c to ensure w3c validation, from http://stackoverflow.com/questions/22466913/google-fonts-url-break-html5-validation-on-w3-org -->
+		<link href="https://fonts.googleapis.com/css?family=Alegreya:400,400i,700,700i,900,900i%7cJosefin+Sans:100,200,300,400,500,600,700,800,900%7cCedarville+Cursive%7cFredericka+the+Great%7cIM+Fell+English" rel="stylesheet">
+		</noscript>
+	</head>
+	<body id="body">
+		<div id="maincontainer" class="maincontainer uk-container uk-container-center">
+			<header class="uk-display-block">
+				<div class="uk-grid uk-container-center">
+					<div class="uk-cover uk-width-1-1 uk-container-center">
+						<div class="uk-grid uk-height-1-1 uk-flex-middle" data-uk-margin="">
+							
+							<h1 class="uk-width-medium-1-2 uk-width-small-1-1 uk-flex-item-1"> <span class="uk-text-uppercase uk-float-left">t</span>ibet. </h1>
+							<p class="headertext uk-width-medium-1-2 uk-width-small-1-1 uk-margin-left"> A far away land.</p>
+						</div>
+					</div>
+					
+				</div>
+			</header>
+			<div id="maincontent">
+				<nav id="sticker" class="uk-navbar uk-margin-remove uk-padding-remove" style="background: aqua;" data-uk-sticky="{clsactive: 'uk-navbar-attached', top: -50, animation: 'uk-animation-slide-top'}" >
+					<a href="#burger" class="uk-hidden-large uk-navbar-toggle uk-hidden-medium uk-visible-small uk-align-right" data-uk-offcanvas="{mode:'slide'}" data-uk-toggle="{target: '#burger'}"></a>
+					<ul class="uk-navbar-nav uk-grid uk-grid-small uk-width-2-5 uk-hidden-small uk-list uk-container-center" id='list'>
+						<li class="uk-width-medium-1-2 uk-width-large-1-4"><a class=" uk-text-center  uk-button-danger uk-margin-small-top uk-margin-small-bottom uk-border-rounded" href="index.html"><i class="uk-icon-home"></i> intro</a></li>
+						<li class="uk-width-medium-1-2 uk-width-large-1-4"><a class="uk-text-center uk-button-primary uk-margin-small-top uk-margin-small-bottom uk-border-rounded" href="sights.html"><i class="uk-icon-binoculars"></i> sights</a></li>
+						<li class="uk-width-medium-1-2 uk-width-large-1-4"><a class="uk-text-center uk-button-danger uk-margin-small-top uk-margin-small-bottom uk-border-rounded" href="form.html"><i class="uk-icon-globe"></i> form</a></li>
+						<li class="uk-width-medium-1-2 uk-width-large-1-4 uk-text-center" data-uk-dropdown=""><a href="#" class=" uk-text-center uk-button-primary uk-margin-small-top uk-margin-small-bottom uk-border-rounded"><i class="uk-icon-external-link"></i> links</a>
+						<div class="uk-dropdown uk-dropdown-navbar">
+							<ul class="uk-nav uk-nav-navbar uk-text-left">
+								<li><a href="frame1.html">travel afar</a></li>
+								<li><a href="frame2.html">momos </a></li>
+								
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		 
+				<div class="uk-grid uk-align-center">
+					<ul id="filter" class="uk-subnav uk-subnav-pill uk-width-1-1">
+						<li class="uk-active" data-uk-filter=""><a href="#">all</a></li>
+						<li data-uk-filter="Filter-People" class=""> <a href="#">People</a></li>
+						<li data-uk-filter="Filter-Structures"> <a href="#">Structures</a></li>
+					</ul>
+				</div>
+				<div id="filter-bin">
+				
+					<div id="filter-image" class="uk-grid-width-small-1-4 uk-margin-tops uk-grid-small uk-grid-width-medium-1-4 uk-grid-width-large-1-4 tm-grid-heights" data-uk-grid="{gutter: 20, controls: '#filter' }" data-uk-check-display>
+						<div data-uk-filter="Filter-People" data-grid-prepared="true" aria-hidden="true"><div class="uk-panel-box"><img src="img/filter/people/DSC00608.JPG"></div></div>
+						<div data-uk-filter="Filter-Structures" data-grid-prepared="true" aria-hidden="false"><div class="uk-panel-box"><img src="img/filter/structures/DSC09112.JPG"></div></div>
+						<div data-uk-filter="Filter-People" data-grid-prepared="true" aria-hidden="true"><div class="uk-panel-box"><img src="img/filter/people/DSC00648.JPG"></div></div> 
+						<div data-uk-filter="Filter-Structures" data-grid-prepared="true" aria-hidden="false"><div class="uk-panel-box"><img src="img/filter/structures/DSC09337.JPG"></div></div>
+						<div data-uk-filter="Filter-People" data-grid-prepared="true" aria-hidden="true"><div class="uk-panel-box"><img src="img/filter/people/DSC00676.JPG"></div></div>
+						<div data-uk-filter="Filter-Structures" data-grid-prepared="true" aria-hidden="false"><div class="uk-panel-box"><img src="img/filter/structures/DSC09400.JPG"></div></div>
+						<div data-uk-filter="Filter-People" data-grid-prepared="true" aria-hidden="true"><div class="uk-panel-box"><img src="img/filter/people/DSC00713.JPG"></div></div>
+						<div data-uk-filter="Filter-Structures" data-grid-prepared="true" aria-hidden="false"><div class="uk-panel-box"><img src="img/filter/structures/DSC09870.JPG"></div></div>
+						<div data-uk-filter="Filter-People, Filter-Structures" data-grid-prepared="true" aria-hidden="false"><div class="uk-panel-box">A+B 8</div></div>
+					</div>
+					 
+				</div>
+ 
+
+			 
+
+		</div>
+			 
+
+	 
+		<!-- end of page container-->
+		<!-- end of main content container -->
+		<div id="burger" class="uk-offcanvas uk-nav uk-nav-parent-icon uk-medium-hidden uk-large-hidden uk-hover">
+			<div class="uk-offcanvas-bar">
+				<ul class="uk-nav uk-nav-side uk-nav-offcanvas uk-nav-parent-icon uk-hover" data-uk-nav="">
+					<li class=""><a class="uk-border-rounded uk-button-default" href="">intro</a></li>
+					<li class=""><a class="uk-border-rounded uk-button-secondary" href="">sights</a></li>
+					<li class=""><a class="uk-border-rounded uk-button-secondary" href="">form</a></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-border-rounded uk-button-secondary">links</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#"> five</a></li>
+							<li><a href="#"> e </a></li>
+							<li> <a href="#">seven</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+		</script>-->
+		</div>
+		<!-- end of page container-->
+		<script src="myscripts/scripts.js"></script>
+	</body>
+</html>

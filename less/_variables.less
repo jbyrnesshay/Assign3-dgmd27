@@ -1,0 +1,34 @@
+
+
+ 
+
+//color variables are here
+@first-color: hsl(220, 100%, 50%);
+@a-color: darken(@first-color, 15%);
+@tweak-color: desaturate(@a-color, 35%);
+
+// navbar, a
+@second-color: spin(@first-color, 180);
+@fourth: spin(@first-color, 30);
+@fifth: spin(@first-color, -34);
+@background-color: lighten(@second-color, 42%);
+@third: lighten(@first-color,  46%);
+@primary-color:  @first-color;
+@base: @primary-color;
+@complementary-color: @second-color;
+@fun: mix(@third, @background-color, 50%);
+@background: saturate(darken(@fun, 7%), 30%);
+//https://webdesign.tutsplus.com/tutorials/creating-color-schemes-with-less-color-functions--cms-23668
+@triadic-secondary : spin(@primary-color, -(360 / 3));
+@triadic-tertiary  : spin(@primary-color, (360 / 3));
+// Analogous Colors
+//https://codepen.io/nickmoreton/pen/fstrx
+@complement1: lighten(spin(@base, 180),15%);
+@complement2: lighten(spin(@base, 180),10%);
+@lighten1: lighten(@base, 15%);
+@lighten2: lighten(@base, 25%);
+@lig: desaturate(@lighten2, 35%);
+@complt: spin(@lig, 180);
+@lighten3: lighten(@second-color, 25%);
+
+ 
