@@ -11331,6 +11331,30 @@ div[data-uk-filter*="Filter"] {
   position: relative;
   width: auto;
 }
+/* line 215, C:\Users\winescape-xx\Desktop\uikitpractice\less\_customstyles.less */
+#filter-bin {
+  margin-top: 3em;
+  height: 30em;
+  margin-bottom: 5em;
+}
+/* line 221, C:\Users\winescape-xx\Desktop\uikitpractice\less\_customstyles.less */
+#sort-help-block {
+  font-family: "Josefin Sans";
+  font-weight: bolder;
+}
+/* line 224, C:\Users\winescape-xx\Desktop\uikitpractice\less\_customstyles.less */
+#sort-help-block .sort-help-message {
+  border-bottom: 1px solid blue;
+  padding-bottom: 1em;
+}
+/* line 234, C:\Users\winescape-xx\Desktop\uikitpractice\less\_customstyles.less */
+#sort-help-block li a {
+  border: 2px solid black;
+}
+/* line 239, C:\Users\winescape-xx\Desktop\uikitpractice\less\_customstyles.less */
+#sort-help-block li a:hover {
+  background: #ffaa00;
+}
 @media (max-width: 900px) {
   /* line 2, C:\Users\winescape-xx\Desktop\uikitpractice\less\_media.less */
   header div.uk-cover:before {
