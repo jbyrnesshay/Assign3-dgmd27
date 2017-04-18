@@ -1,24 +1,17 @@
 
+<!-- this is a demonstration of filtering with the dynamic grid.  I could have used any content, but chose to use images from my trip. 
+As the point of this page is proof of the filtering concept, I excluded the images on this page from any responsive (picturefill) treatment -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Document</title>
-		<!--<link href="bower_components/uikit/css/uikit.gradient.min.css" rel="stylesheet">-->
-		
 		<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
 		</script>
 		<script src="uikit/js/uikit.js"></script>
-		<script src="uikit/js/components/lightbox.js"></script>
-		<script src="uikit/js/components/parallax.js"></script>
 		<script src="uikit/js/components/sticky.js"></script>
-		<script src="uikit/js/components/slideshow.js"></script>
-		<script src="uikit/js/components/slideshow-fx.js"></script>
-		
 		<script type="text/javascript" src="uikit/js/components/grid.min.js"></script>
-		<script src="uikit/js/components/grid-parallax.min.js"></script>
-		<script src="uikit/js/components/sortable.js"></script>
 		<link href="styles.css" rel="stylesheet" type="text/css">
 		<link href="css/styleless.css" rel="stylesheet">
 		<script src="myscripts/picturefill.min.js" async></script>
@@ -36,12 +29,10 @@
 				<div class="uk-grid uk-container-center">
 					<div class="uk-cover uk-width-1-1 uk-container-center">
 						<div class="uk-grid uk-height-1-1 uk-flex-middle" data-uk-margin="">
-							
 							<h1 class="uk-width-medium-1-2 uk-width-small-1-1 uk-flex-item-1"> <span class="uk-text-uppercase uk-float-left">t</span>ibet. </h1>
 							<p class="headertext uk-width-medium-1-2 uk-width-small-1-1 uk-margin-left"> A far away land.</p>
 						</div>
 					</div>
-					
 				</div>
 			</header>
 			<div id="maincontent">
@@ -57,39 +48,34 @@
 								<li><a href="frame1.html">Travel Afar</a></li>
 								<li><a href="frame2.html">Momos </a></li>
 							</ul>
+						</div>
 					</li>
 				</ul>
 			</nav>
-		 
+		 		<!-- began the filteringsection with a helpful message -->
 				<div id="sort-help-block" class="uk-grid uk-align-center">
 				<h3 class="sort-help-message uk-margin-top uk-padding-remove uk-margin-bottom"> Click tab to view and sort images by category </h3>
+					<!-- settuping up dynamic grid filtering by category -->
 					<ul id="filter" class="uk-subnav uk-subnav-pill uk-width-1-1">
 						<li class="uk-active" data-uk-filter=""><a href="#">all</a></li>
 						<li data-uk-filter="Filter-People" class=""> <a href="#">People</a></li>
 						<li data-uk-filter="Filter-Structures"> <a href="#">Structures</a></li>
 					</ul>
-				
 				</div>
+				<!-- my various filterabble items are here.  the frame of this uk-filter section code is taken directly from the filtering section at https://getuikit.com/v2/docs/grid-js.html, their technique not at all mine-->
 				<div id="filter-bin">
-				
-					<div id="filter-image" class="uk-grid-width-small-1-4 uk-margin-top uk-grid-small uk-grid-width-medium-1-4 uk-grid-width-large-1-4 tm-grid-heights" data-uk-grid="{gutter: 20, controls: '#filter' }" data-uk-check-display>
-						<div data-uk-filter="Filter-People" data-grid-prepared="true" aria-hidden="true"><div class="uk-panel-box"><img src="img/filter/people/DSC00608.JPG"></div></div>
-						<div data-uk-filter="Filter-Structures" data-grid-prepared="true" aria-hidden="false"><div class="uk-panel-box"><img src="img/filter/structures/DSC09112.JPG"></div></div>
-						<div data-uk-filter="Filter-People" data-grid-prepared="true" aria-hidden="true"><div class="uk-panel-box"><img src="img/filter/people/DSC00648.JPG"></div></div> 
-						<div data-uk-filter="Filter-Structures" data-grid-prepared="true" aria-hidden="false"><div class="uk-panel-box"><img src="img/filter/structures/DSC09337.JPG"></div></div>
-						<div data-uk-filter="Filter-People" data-grid-prepared="true" aria-hidden="true"><div class="uk-panel-box"><img src="img/filter/people/DSC00676.JPG"></div></div>
-						<div data-uk-filter="Filter-Structures" data-grid-prepared="true" aria-hidden="false"><div class="uk-panel-box"><img src="img/filter/structures/DSC09400.JPG"></div></div>
-						<div data-uk-filter="Filter-People" data-grid-prepared="true" aria-hidden="true"><div class="uk-panel-box"><img src="img/filter/people/DSC00713.JPG"></div></div>
-						<div data-uk-filter="Filter-Structures" data-grid-prepared="true" aria-hidden="false"><div class="uk-panel-box"><img src="img/filter/structures/DSC09870.JPG"></div></div>
-						 
-					</div>
-					 
+						<div id="filter-image" class="uk-grid-width-small-1-2 uk-margin-top uk-grid-small uk-grid-width-medium-1-4 uk-grid-width-large-1-4 tm-grid-heights" data-uk-grid="{gutter: 20, controls: '#filter' }" data-uk-check-display>
+						<div data-uk-filter="Filter-People" data-grid-prepared="true" aria-hidden="true"><div class="uk-panel-box"><img src="img/filter/people/DSC00608.png" alt="filterimage"></div></div>
+						<div data-uk-filter="Filter-Structures" data-grid-prepared="true" aria-hidden="false"><div class="uk-panel-box"><img src="img/filter/structures/DSC09112.png" alt="filterimage"></div></div>
+						<div data-uk-filter="Filter-People" data-grid-prepared="true" aria-hidden="true"><div class="uk-panel-box"><img src="img/filter/people/DSC00648.png" alt="filterimage"></div></div> 
+						<div data-uk-filter="Filter-Structures" data-grid-prepared="true" aria-hidden="false"><div class="uk-panel-box"><img src="img/filter/structures/DSC09337.png" alt="filterimage"></div></div>
+						<div data-uk-filter="Filter-People" data-grid-prepared="true" aria-hidden="true"><div class="uk-panel-box"><img src="img/filter/people/DSC00676.png" alt="filterimage"></div></div>
+						<div data-uk-filter="Filter-Structures" data-grid-prepared="true" aria-hidden="false"><div class="uk-panel-box"><img src="img/filter/structures/DSC09400.png" alt="filterimage"></div></div>
+						<div data-uk-filter="Filter-People" data-grid-prepared="true" aria-hidden="true"><div class="uk-panel-box"><img src="img/filter/people/DSC00713.png" alt="filterimage"></div></div>
+						<div data-uk-filter="Filter-Structures" data-grid-prepared="true" aria-hidden="false"><div class="uk-panel-box"><img src="img/filter/structures/DSC09870.png" alt="filterimage"></div></div>
+						</div>
 				</div>
- 
-
-			 
-
-		</div>
+			</div>
 			 
 
 	 
@@ -98,25 +84,22 @@
 		<div id="burger" class="uk-offcanvas uk-nav uk-nav-parent-icon uk-medium-hidden uk-large-hidden uk-hover">
 			<div class="uk-offcanvas-bar">
 				<ul class="uk-nav uk-nav-side uk-nav-offcanvas uk-nav-parent-icon uk-hover" data-uk-nav="">
-					<li class=""><a class="uk-border-rounded uk-button-default" href="">intro</a></li>
-					<li class=""><a class="uk-border-rounded uk-button-secondary" href="">sights</a></li>
-					<li class=""><a class="uk-border-rounded uk-button-secondary" href="">form</a></li>
+					<li class=""><a class="uk-border-rounded uk-button-default" href="index.html">intro</a></li>
+					<li class=""><a class="uk-border-rounded uk-button-secondary" href="sorting.html">sorting</a></li>
+					<li class=""><a class="uk-border-rounded uk-button-secondary" href="form.html">form</a></li>
 					<li class="uk-parent">
 						<a href="#" class="uk-border-rounded uk-button-secondary">links</a>
 						<ul class="uk-nav-sub">
-							<li><a href="#"> five</a></li>
-							<li><a href="#"> e </a></li>
-							<li> <a href="#">seven</a></li>
+							<li><a href="#"> travel</a></li>
+							<li><a href="#"> momos </a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>
 		</div>
+	</div>
 		
-		<!--<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
-		</script>-->
-		</div>
-		<!-- end of page container-->
+
 		<script src="myscripts/scripts.js"></script>
 	</body>
 </html>

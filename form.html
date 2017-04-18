@@ -4,15 +4,11 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Document</title>
-		<!--<link href="bower_components/uikit/css/uikit.gradient.min.css" rel="stylesheet">-->
 		<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
 		</script>
 		<script src="uikit/js/uikit.js"></script>
 		<script src="uikit/js/components/lightbox.js"></script>
-		<script src="uikit/js/components/parallax.js"></script>
 		<script src="uikit/js/components/sticky.js"></script>
-		<script src="uikit/js/components/slideshow.js"></script>
-		<script src="uikit/js/components/slideshow-fx.js"></script>
 		<script src="uikit/js/components/form-password.js"></script>
 		<script src="uikit/js/components/switcher.js"></script>
 		<link href="styles.css" rel="stylesheet" type="text/css">
@@ -38,127 +34,127 @@
 				</div>
 			</div>
 		</header>
+		<!-- sticky nav -->
 		<nav id="sticker" class="uk-navbar uk-margin-remove uk-padding-remove" data-uk-sticky="{clsactive: 'uk-navbar-attached', top: -50, animation: 'uk-animation-slide-top'}" >
-				<a href="#burger" class="uk-hidden-large uk-navbar-toggle uk-hidden-medium uk-visible-small uk-align-right" data-uk-offcanvas="{mode:'slide'}" data-uk-toggle="{target: '#burger'}"></a>
-				<ul class="uk-navbar-nav uk-grid uk-grid-small uk-width-2-5 uk-hidden-small uk-list uk-container-center" id='list'>
-					<li class="uk-width-medium-1-2 uk-width-large-1-4"><a class="uk-button-primary" href="index.html"><i class="uk-icon-home"></i> Home</a></li>
-					<li class="uk-width-medium-1-2 uk-width-large-1-4"><a class="uk-button-primary" href="sorting.html"><i class="uk-icon-binoculars"></i> Sorting</a></li>
-					<li class="uk-width-medium-1-2 uk-width-large-1-4"><a class="uk-button-primary" href="form.html"><i class="uk-icon-globe"></i> Form</a></li>
-					<li class="uk-width-medium-1-2 uk-width-large-1-4" data-uk-dropdown=""><a href="#" class="uk-button-primary"><i class="uk-icon-external-link"></i> Links</a>
-						<div class="uk-dropdown uk-dropdown-navbar">
-							<ul class="uk-nav uk-nav-navbar uk-text-left">
-								<li><a href="frame1.html">Travel Afar</a></li>
-								<li><a href="frame2.html">Momos </a></li>
-							</ul>
-					</li>
-				</ul>
-			</nav>
-	<div id="main-content-container" class="uk-padding-remove uk-container uk-margin-remove">
-		<div class="uk-grid uk-align-center uk-panel uk-panel-box-secondary">
-			<h2 class="uk-margin-top uk-margin-left uk-padding-remove"> Things I saw</h2>
-		 
-		<!-- grid holds both switcher and form, even columns here, i.e., uk-grid-width-* -->
-		<div id="maingrid" class="uk-grid uk-align-center uk-padding-remove uk-margin-remove uk-grid-divider" data-uk-grid-match="{target:'.uk-panel'}" >
-			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-padding-remove">
-				<div class="uk-panel uk-panel-box"> 
-					<ul class="uk-tab" data-uk-tab="{connect: '#my-tabs'}">
-						<li> <a href="#">Bharkor St</a></li>
-						<li> <a href="#">Yaks</a></li>
-						<li> <a href="#">Debates</a></li>
-						<li> <a href="#">Food</a></li>
-					</ul>
-					<ul id="my-tabs" class="uk-switcher uk-margin">
-						<li><p>Bharkor Square is an old section of Lhasa, which preserves a more traditional village feel, with various traditional markets, shops, and restaurants. As the site of Jokhang Temple, it is also important to pilgrams and to residents who come for religious practicies on a daily basis.
-						</p></li>
-						<li><p>I saw a yak wandering free on the grounds of the Sera Monastery. I don't know where it was going or where it was coming from. Quite likely, it belonged to the monks. It was not my first yak, but definitely my first yak sighting at a monastery. I took a bunch of pictures I took of it.</p></li>
-						<li><p>The monk debates at Sera Monastery are a unique experience. The monks have regular ritual debates on sera monastery grounds.  The standing monk debates ith the seated monk, and he takes certain ritual postures, including winding up and clapping his hands forcefully in the direction of the seated monk.  , in one of the debating rituals the monks are known for.</p></li>
-						<li><p>A very popular food are momos, a type of dumpling, often filled with meat. The ones I had were filled with yak meat. The noodle soup I had for breakfast also included yak meat. Yak meat is very prevalent. It is the most popular meat, kind of the equivalent of beef, but without the competition that beef has in the United States. Tibetans are very reliant upon it. Another traditional breakfast is barley porridge, which I gave a pass. There were some dishes available with vegetables including potatoes, but i was left with the impression that noodles, dumplings, soup, and yak were the main staples. Unfortunately, time was short and on this trip I didn’t have any butter tea ... a preparation of tea which is made with, you guessed it, yak butter.</p></li>
+			<a href="#burger" class="uk-hidden-large uk-navbar-toggle uk-hidden-medium uk-visible-small uk-align-right" data-uk-offcanvas="{mode:'slide'}" data-uk-toggle="{target: '#burger'}"></a>
+			<ul class="uk-navbar-nav uk-grid uk-grid-small uk-width-2-5 uk-hidden-small uk-list uk-container-center" id='list'>
+				<li class="uk-width-medium-1-2 uk-width-large-1-4"><a class="uk-button-primary" href="index.html"><i class="uk-icon-home"></i> Home</a></li>
+				<li class="uk-width-medium-1-2 uk-width-large-1-4"><a class="uk-button-primary" href="sorting.html"><i class="uk-icon-binoculars"></i> Sorting</a></li>
+				<li class="uk-width-medium-1-2 uk-width-large-1-4"><a class="uk-button-primary" href="form.html"><i class="uk-icon-globe"></i> Form</a></li>
+				<li class="uk-width-medium-1-2 uk-width-large-1-4" data-uk-dropdown=""><a href="#" class="uk-button-primary"><i class="uk-icon-external-link"></i> Links</a>
+				<div class="uk-dropdown uk-dropdown-navbar">
+					<ul class="uk-nav uk-nav-navbar uk-text-left">
+						<li><a href="#">Travel Afar</a></li>
+						<li><a href="#">Momos </a></li>
 					</ul>
 				</div>
-			</div>
-			
-			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-margin-remove uk-padding-remove">
-
-				<div id="" class="uk-panel uk-panel-box-secondary">
-				 
-					<form id="form" class="uk-form uk-form-stacked uk-margin-left" action="#" method="post" novalidate>
-						<fieldset>
-							<legend>Create an account to get updates!<span class="uk-badge uk-border-rounded uk-margin-left uk-badge-danger">Sign Up!</span></legend>
-							<div class="uk-form-row">
-								<div class="uk-form-controls">
-									<input type="text" placeholder="Fullname" id="name" name="name" >
-								</div>
-							</div>
-							<div class="uk-form-row">
-								<div class="uk-form-controls">
-									<input type="email" placeholder="Email" id="email" name="email">
-								</div>
-							</div>
-							<div class="uk-form-row">
-								<div class="uk-form-controls">
-									<div class="uk-form-password">
-										<input type="password" placeholder="Password" id="password" name="password">
-										<a href="" class="uk-form-password-toggle" data-uk-form-password>Show</a>
-									</div>
-								</div>
-							</div>
-							<div class="uk-form-row">
-								<div class="uk-form-controls">
-									<input type="tel" placeholder="Telephone" id="telephone" name="telephone">
-								</div>
-							</div>
-							<p>Click Items Below to Select Content Updates:</p>
-							<div class="uk-form-row" data-uk-button-checkbox id="content">
-								<div class="uk-form-controls">
-									<button class="uk-width-1-4 uk-button uk-button-success uk-border-rounded uk-text-small" name="content-select" value="Momos" type="button">Momos</button>
-									<button class="uk-width-1-4 uk-button uk-button-success uk-border-rounded uk-text-small" name="content-select" value="Barley Porridge" type="button">Barley porridge</button>
-									<button class="uk-width-1-4 uk-button-success uk-border-rounded uk-button uk-text-small" name="content-select" value="Butter Tea" type="button">Butter tea</button>
-								</div>
-							</div>
-							<div class="uk-form-row">
-								<div class="uk-form-controls">
-									<button class="uk-button uk-button-danger uk-margin-top uk-margin-bottom" name="submit" id="submit">Submit</button>
-									<!-- this submit button opens a modal, however the data-uk-modal attribute for the submit button is applied and set in external javascript file
-									as data-uk-modal="{target:'#form-modal'},  so that the modal does not open with a blank form -->
-									<div id="form-modal" class="uk-modal" uk-modal="{center: true}">
-										<div id="dialog" class='uk-modal-dialog'>
-											<a href="" class="uk-modal-close uk-close">
-											</a>
-											<!--these p tags are empty but are filled with form input by selecting them with javascript -->
-											<p></p>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-content-container" class="uk-padding-remove uk-container uk-margin-remove">
+			<div class="uk-grid uk-align-center uk-panel uk-panel-box-secondary">
+				<h2 class="uk-margin-top uk-margin-left uk-padding-remove"> Things I saw</h2>
+				<!-- grid holds both switcher and form, even columns here, i.e., uk-grid-width-* -->
+				<div id="maingrid" class="uk-grid uk-align-center uk-padding-remove uk-margin-remove uk-grid-divider" data-uk-grid-match="{target:'.uk-panel'}" >
+					<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-padding-remove">
+						<div class="uk-panel uk-panel-box">
+							<!-- using uk-switcher and tabs -->
+							<ul class="uk-tab" data-uk-tab="{connect: '#my-tabs'}">
+								<li> <a href="#">Bharkor St</a></li>
+								<li> <a href="#">Yaks</a></li>
+								<li> <a href="#">Debates</a></li>
+								<li> <a href="#">Food</a></li>
+							</ul>
+							<ul id="my-tabs" class="uk-switcher uk-margin">
+								<li><p>Bharkor Square is an old section of Lhasa, which preserves a more traditional village feel, with various traditional markets, shops, and restaurants. As the site of Jokhang Temple, it is also important to pilgrams and to residents who come for religious practicies on a daily basis.
+								</p></li>
+								<li><p>I saw a yak wandering free on the grounds of the Sera Monastery. I don't know where it was going or where it was coming from. Quite likely, it belonged to the monks. It was not my first yak, but definitely my first yak sighting at a monastery. I took a bunch of pictures I took of it.</p></li>
+								<li><p>The monk debates at Sera Monastery are a unique experience. The monks have regular ritual debates on sera monastery grounds.  The standing monk debates ith the seated monk, and he takes certain ritual postures, including winding up and clapping his hands forcefully in the direction of the seated monk.  , in one of the debating rituals the monks are known for.</p></li>
+								<li><p>A very popular food are momos, a type of dumpling, often filled with meat. The ones I had were filled with yak meat. The noodle soup I had for breakfast also included yak meat. Yak meat is very prevalent. It is the most popular meat, kind of the equivalent of beef, but without the competition that beef has in the United States. Tibetans are very reliant upon it. Another traditional breakfast is barley porridge, which I gave a pass. There were some dishes available with vegetables including potatoes, but i was left with the impression that noodles, dumplings, soup, and yak were the main staples. Unfortunately, time was short and on this trip I didn’t have any butter tea ... a preparation of tea which is made with, you guessed it, yak butter.</p></li>
+							</ul>
+						</div>
+					</div>
+					<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-margin-remove uk-padding-remove">
+						<div class="uk-panel uk-panel-box-secondary">
+							<!-- form starts here, using form-stacked, form-row, form-controls -->
+							<form id="form" class="uk-form uk-form-stacked uk-margin-left" action="#" method="post" novalidate>
+								<fieldset>
+									<!-- badge is here -->
+									<legend>Create an account to get updates!<span class="uk-badge uk-border-rounded uk-margin-left uk-badge-danger">Sign Up!</span></legend>
+									<!-- first form-row -->
+									<div class="uk-form-row">
+										<div class="uk-form-controls">
+											<input type="text" placeholder="Fullname" id="name" name="name" >
 										</div>
 									</div>
-								</div>
-							</div>
-						</fieldset>
-					</form>
-					</div><!--formcontainer-->
-				</div>
-				</div><!-- end main grid -->
-				</div><!-- end maintocontentcotnainer-->
-				</div><!--end pagecontainer-->
-			</div>
-				
-				<div id="burger" class="uk-offcanvas uk-nav uk-nav-parent-icon uk-medium-hidden uk-large-hidden uk-hover">
-					<div class="uk-offcanvas-bar">
-						<ul class="uk-nav uk-nav-side uk-nav-offcanvas uk-nav-parent-icon uk-hover" data-uk-nav="">
-							<li class=""><a class="uk-border-rounded uk-button-default" href="index.html">intro</a></li>
-							<li class=""><a class="uk-border-rounded uk-button-secondary" href="sights.html">sights</a></li>
-							<li class=""><a class="uk-border-rounded uk-button-secondary" href="form.html">form</a></li>
-							<li class="uk-parent">
-								<a href="#" class="uk-border-rounded uk-button-secondary">links</a>
-								<ul class="uk-nav-sub">
-									<li><a href="frame1.html"> travel</a></li>
-									<li><a href="frame2.html"> momos </a></li>
-								</ul>
-							</li>
-						</ul>
+									<div class="uk-form-row">
+										<div class="uk-form-controls">
+											<input type="email" placeholder="Email" id="email" name="email">
+										</div>
+									</div>
+									<div class="uk-form-row">
+										<div class="uk-form-controls">
+											<div class="uk-form-password">
+												<input type="password" placeholder="Password" id="password" name="password">
+												<a href="" class="uk-form-password-toggle" data-uk-form-password>Show</a>
+											</div>
+										</div>
+									</div>
+									<div class="uk-form-row">
+										<div class="uk-form-controls">
+											<input type="tel" placeholder="Telephone" id="telephone" name="telephone">
+										</div>
+									</div>
+									<p>Click Items Below to Select Content Updates:</p>
+									<!-- using data-uk-button-checkbox to create a checkbox functionality with button elements, select none, 1, 2, or all 3 -->
+									<div class="uk-form-row" data-uk-button-checkbox id="content">
+										<div class="uk-form-controls">
+											<button class="uk-width-1-4 uk-button uk-button-success uk-border-rounded uk-text-small" name="content-select" value="Momos" type="button">Momos</button>
+											<button class="uk-width-1-4 uk-button uk-button-success uk-border-rounded uk-text-small" name="content-select" value="Barley Porridge" type="button">Barley porridge</button>
+											<button class="uk-width-1-4 uk-button-success uk-border-rounded uk-button uk-text-small" name="content-select" value="Butter Tea" type="button">Butter tea</button>
+										</div>
+									</div>
+									<div class="uk-form-row">
+										<div class="uk-form-controls">
+											<button class="uk-button uk-button-danger uk-margin-top uk-margin-bottom" name="submit" id="submit">Submit</button>
+											<!-- this submit button opens a modal, however the data-uk-modal attribute for the submit button is applied and set in external javascript file as data-uk-modal="{target:'#form-modal'},  so that the modal does not open with a blank form -->
+											<div id="form-modal" class="uk-modal" data-uk-modal="{center: true}">
+												<div id="dialog" class='uk-modal-dialog'>
+												<!-- uk-close is used here -->
+													<a href="" class="uk-modal-close uk-close">
+													</a>
+													<!--these p tags are empty but are filled with form input by selecting them with javascript -->
+													<p></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+							</div><!--formcontainer-->
+						</div>
+						</div>
+						</div>
+						</div> 
 					</div>
-				</div>
-				
-				<!--<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
-				</script>-->
-				<!-- end of page container-->
+					<!-- offcanvas -->
+					<div id="burger" class="uk-offcanvas uk-nav uk-nav-parent-icon uk-medium-hidden uk-large-hidden uk-hover">
+						<div class="uk-offcanvas-bar">
+							<ul class="uk-nav uk-nav-side uk-nav-offcanvas uk-nav-parent-icon uk-hover" data-uk-nav="">
+								<li class=""><a class="uk-border-rounded uk-button-default" href="index.html">intro</a></li>
+								<li class=""><a class="uk-border-rounded uk-button-secondary" href="sorting.html">sorting</a></li>
+								<li class=""><a class="uk-border-rounded uk-button-secondary" href="form.html">form</a></li>
+								<li class="uk-parent">
+									<a href="#" class="uk-border-rounded uk-button-secondary">links</a>
+									<ul class="uk-nav-sub">
+										<li><a href="#"> travel</a></li>
+										<li><a href="#"> momos </a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+			
 				<script src="myscripts/scripts.js"></script>
 			</body>
 		</html>

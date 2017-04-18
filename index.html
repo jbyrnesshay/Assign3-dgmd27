@@ -3,17 +3,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Document</title>
-		<!--<link href="bower_components/uikit/css/uikit.gradient.min.css" rel="stylesheet">-->
+		<title>Trip to Lhasa</title>
 		<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
 		</script>
-		<script src="uikit/js/uikit.js"></script>
+		<script src="uikit/js/uikit.min.js"></script>
 		<script src="uikit/js/components/lightbox.js"></script>
-		<script src="uikit/js/components/parallax.js"></script>
 		<script src="uikit/js/components/sticky.js"></script>
-		<link href="styles.css" rel="stylesheet" type="text/css">
 		<link href="css/styleless.css" rel="stylesheet">
-		<link href="uikit/animate.css/animate.css" rel="stylesheet">
 		<script src="myscripts/picturefill.min.js" async></script>
 		<script> // Picture element HTML5 shiv
 					document.createElement( "picture" );
@@ -35,65 +31,72 @@
 					</div>
 				</div>
 			</header>
+			<!-- my sticky nav bar is here, using data-uk-sticky javascript -->
 			<nav id="sticker" class="uk-navbar uk-margin-remove uk-padding-remove" data-uk-sticky="{clsactive: 'uk-navbar-attached', top: -50, animation: 'uk-animation-slide-top'}" >
+				<!-- my offcanvas menu, using data-uk-offcanvas and the slide animation, and toggle (burger) are linked here -->
+				<!-- code for the offcanvas set is at bottom of this page -->
 				<a href="#burger" class="uk-hidden-large uk-navbar-toggle uk-hidden-medium uk-visible-small uk-align-right" data-uk-offcanvas="{mode:'slide'}" data-uk-toggle="{target: '#burger'}"></a>
+				<!-- the navbar is a grid of 4 buttons, each of which take 1/4 the navbar, the navbar itself is using width-2-5, so it only takes up slightly less than half the left side of the page, for aesthetic reasons, there is nothing in 3-5 -->
 				<ul class="uk-navbar-nav uk-grid uk-grid-small uk-width-2-5 uk-hidden-small uk-list uk-container-center" id='list'>
+					<!-- icons are found inside each of the buttons -->
 					<li class="uk-width-medium-1-2 uk-width-large-1-4"><a class="uk-button-primary" href="index.html"><i class="uk-icon-home"></i> Home</a></li>
 					<li class="uk-width-medium-1-2 uk-width-large-1-4"><a class="uk-button-primary" href="sorting.html"><i class="uk-icon-binoculars"></i> Sorting</a></li>
 					<li class="uk-width-medium-1-2 uk-width-large-1-4"><a class="uk-button-primary" href="form.html"><i class="uk-icon-globe"></i> Form</a></li>
+					<!--styled button here -->
+					<!-- dropdown menu here -->
 					<li class="uk-width-medium-1-2 uk-width-large-1-4" data-uk-dropdown=""><a href="#" class="uk-button-primary"><i class="uk-icon-external-link"></i> Links</a>
 						<div class="uk-dropdown uk-dropdown-navbar">
 							<ul class="uk-nav uk-nav-navbar uk-text-left">
-								<li><a href="frame1.html">Travel Afar</a></li>
-								<li><a href="frame2.html">Momos </a></li>
+								<li><a href="#">Travel Afar</a></li>
+								<li><a href="#">Momos </a></li>
 							</ul>
+						</div>
 					</li>
 				</ul>
 			</nav>
+			<!-- hold the main content together -->
 			<div id="main-content-container" class="uk-padding-remove uk-container uk-margin-remove">
 				<div class="uk-align-center uk-padding-remove-top">
-					<!--span all 6 columns of 6 column grid system-->
 					<article class="article uk-panel uk-panel-box uk-clearfix" >
 						<h2> Trip to Tibet Introduction</h2>
-						<!--responsive image-->
-						<div class="uk-grid">
-						<div class="uk-width-1-1" >
-						<div class="uk-align-right">
-						<a href="img/background2_400.png" class="uk-modal-lightbox" data-uk-lightbox title="title">
-							<figure class="uk-overlay uk-overlay-hover uk-margin-left">
-								<picture class="">
-									<img src="img/background2_250.png" class="" alt="ting">
-								</picture>
-								<figcaption class="uk-overlay-panel uk-overlay-slide-bottom">Lhasa, Tibet !!!</figcaption>
-							</figure>
-						</a>
-						</div>
-						
-							<div class="uk-margin-right-large">
-					
-							<p class=""> <span class="jan">In January</span> 2016, I went solo on a 3-day trip to Lhasa, Tibet. Tibet is a place I had always had a fascination with and wanted to visit since I was a child. It’s definitely worth more than a 3 day trip, but my available time was short and I didn’t want to let that stop me.
-							</p>
-							<p class=""> I expected Lhasa to have retained more of the traditional Tibetan vibe that I had my head, the exotic image that had played in my head for years. So, at first I was a little disillusioned by all of the modernization and development.
-							</p>
-						</div>
-						</div>
-						</div>
+							<div class="uk-grid">
+								<div class="uk-width-1-1" >
+									<div class="uk-align-right">
+										<a href="img/background2_400.png" class="uk-modal-lightbox" data-uk-lightbox title="title">
+											<figure class="uk-overlay uk-overlay-hover uk-margin-left">
+												<picture class="">
+													<source srcset="img/background2_215.png" media="(max-width:800px)">
+														<img src="img/background2_250.png" class="" alt="tibet">
+												</picture>
+												<figcaption class="uk-overlay-panel uk-overlay-slide-bottom">Lhasa, Tibet !!!</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="uk-margin-right-large">
+										<p class=""> <span class="jan">In January</span> 2016, I went solo on a 3-day trip to Lhasa, Tibet. Tibet is a 	place I had always had a fascination with and wanted to visit since I was a child. It’s definitely worth more than a 3 day trip, but my available time was short and I didn’t want to let that stop me.
+										</p>
+										<p class=""> I expected Lhasa to have retained more of the traditional Tibetan vibe that I had my head, the exotic image that had played in my head for years. So, at first I was a little disillusioned by all of the modernization and development.
+										</p>
+									</div>
+								</div>
+							</div>
 					</article>
 				</div>
+				<!-- matching panel heights here -->
 				<div class="uk-grid uk-align-center" data-uk-grid-match="{target:'.uk-panel'}">
 					<article class="uk-width-3-6 uk-panel uk-panel-box uk-clearfix">
 						<h3>Temples </h3>
 						<!--responsive image-->
 						<div class="uk-align-left">
-						<a href="img/jokhang_temple_400.png" class="uk-modal-lightbox" title="title" data-uk-lightbox="">
-							<figure class="uk-margin-right uk-border-rounded">
-								<picture class="">
-									<source srcset="img/jokhang_temple_160.png" media="(max-width:800px)">
-									<img src="img/jokhang_temple_215.png" alt="ting">
-								</picture>
-								<figcaption></figcaption>
-							</figure>
-						</a>
+							<a href="img/jokhang_temple_400.png" class="uk-modal-lightbox" title="title" data-uk-lightbox="">
+								<figure class="uk-margin-right uk-border-rounded">
+									<picture class="">
+										<source srcset="img/jokhang_temple_160.png" media="(max-width:800px)">
+										<img src="img/jokhang_temple_215.png" alt="tibet">
+									</picture>
+									<figcaption></figcaption>
+								</figure>
+							</a>
 						</div>
 						<div class="">
 							<p>Lhasa is the site of a number of historic monasteries and temples. It's one of the few large cities in Tibet but it's a small city by American standards. It's more equivalent to a large town.
@@ -109,43 +112,41 @@
 					</article>
 				</div>
 				<div class="uk-grid uk-align-center" data-uk-grid-match="{target:'.uk-panel'}">
-					<!--span 2/6uk columns, drop to 3/6, (and then 6/6 at < 480px-->
+					<!-- panel is here, scrollspy is here -->
 					<article class="uk-width-2-6 uk-panel uk-panel-box" data-uk-scrollspy="{cls: 'uk-animation-fade',  repeat: true, delay: 300}">
 						<h3>People </h3>
 						<p>The people were a mix of ethnic Tibetans and Chinese. I didn’t get to observe the people much other than to just see them going about their daily business There were many Chinese police around to keep watch on everything. It was not the tourist season, so I was one of the few Westerners around. It coincided with pilgrimage, so there will pilgrims from far away. 
 						</p>
 					</article>
-					<!--span 4/6 columns, drop to 3/6, (and then 6/6 at < 480px)-->
 					<article class="uk-width-4-6 uk-panel uk-panel-box" data-uk-scrollspy="{cls: 'uk-animation-fade',  repeat: true, delay: 800}">
 						<h3>Food </h3>
 						<p>A very popular food are momos, a type of dumpling, often filled with meat. The ones I had were filled with yak meat. The noodle soup I had for breakfast also included yak meat. Yak meat is very prevalent. It is the most popular meat, kind of the equivalent of beef, but without the competition that beef has in the United States. Tibetans are very reliant upon it. Another traditional breakfast is barley porridge, which I gave a pass. There were some dishes available with vegetables including potatoes, but i was left with the impression that noodles, dumplings, soup, and yak were the main staples. Unfortunately, time was short and on this trip I didn’t have any butter tea ... a preparation of tea which is made with, you guessed it, yak butter.
 						</p>
 					</article>
 				</div>
-				 
 			</div>
 		<!-- end of main content container -->
+		
+		<!-- offcanvas nav element -->
 		<div id="burger" class="uk-offcanvas uk-nav uk-nav-parent-icon uk-medium-hidden uk-large-hidden uk-hover">
 			<div class="uk-offcanvas-bar">
 				<ul class="uk-nav uk-nav-side uk-nav-offcanvas uk-nav-parent-icon uk-hover" data-uk-nav="">
 					<li class=""><a class="uk-border-rounded uk-button-default" href="index.html">intro</a></li>
-					<li class=""><a class="uk-border-rounded uk-button-secondary" href="sights.html">sights</a></li>
+					<li class=""><a class="uk-border-rounded uk-button-secondary" href="sorting.html">sorting</a></li>
 					<li class=""><a class="uk-border-rounded uk-button-secondary" href="form.html">form</a></li>
 					<li class="uk-parent">
 						<a href="#" class="uk-border-rounded uk-button-secondary">links</a>
 						<ul class="uk-nav-sub">
-							<li><a href="frame1.html"> travel</a></li>
-							<li><a href="frame2.html"> momos </a></li>
+							<li><a href="#"> travel</a></li>
+							<li><a href="#"> momos </a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<!--<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
-	</script>-->
-	
 	<!-- end of page container-->
+	<!-- my own javascripts file -->
 	<script src="myscripts/scripts.js"></script>
 </body>
 </html>

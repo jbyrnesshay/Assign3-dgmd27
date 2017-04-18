@@ -201,43 +201,43 @@
 
 }
 .hook-offcanvas-bar() {
-background: -moz-linear-gradient(top, rgba(154,30,117,1) 40%, rgba(232,126,211,.5) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(154,30,117,1) 40%,rgba(232,126,211,.5) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(154,30,117,1) 40%,rgba(232,126,211,.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-z-index: -1;
-padding-top: 3em;
-width:  40%;
-color:black;
-
-li {
-    width: 75%;
-    padding: 0;
-    background: @fourth;
-    color:aqua; 
-    opacity:  1;
-    margin-bottom: .5em;
-    margin-left: 1.4em;
-    .uk-border-rounded;
-}
-a {
-    font-family: "Josefin Sans";
-    background: @tweak-color;
-    z-index: 9;
-    opacity: 1;
-    margin: .75em 0;
-    padding-left: 2em;
-    color: black;
-    font-weight:bolder;
-    text-transform: uppercase;
-    
-    &:hover {
-        color:white;
-        opacity: 1;
-        background: @third;
-        z-index: 21;
-        font-weight:bolder;
+    //gradient from www.colorzilla.com/gradient-editor/
+    background: -moz-linear-gradient(top, rgba(154,30,117,1) 40%, rgba(232,126,211,.5) 100%); 
+    background: -webkit-linear-gradient(top, rgba(154,30,117,1) 40%,rgba(232,126,211,.5) 100%); 
+    background: linear-gradient(to bottom, rgba(154,30,117,1) 40%,rgba(232,126,211,.5) 100%); 
+    z-index: -1;
+    padding-top: 3em;
+    width:  40%;
+    color:black;
+    li {
+        width: 75%;
+        padding: 0;
+        background: @fourth-color;
+        color:aqua; 
+        opacity:  1;
+        margin-bottom: .5em;
+        margin-left: 1.4em;
+        .uk-border-rounded;
     }
-}
+    a {
+        font-family: "Josefin Sans";
+        background: @prime-color;
+        z-index: 9;
+        opacity: 1;
+        margin: .75em 0;
+        padding-left: 2em;
+        color: black;
+        font-weight:bolder;
+        text-transform: uppercase;
+        
+        &:hover {
+            color:white;
+            opacity: 1;
+            background: @third-color;
+            z-index: 21;
+            font-weight:bolder;
+        }
+    }
 }
 .hook-offcanvas-panel() {}
 .hook-offcanvas-misc() {}
